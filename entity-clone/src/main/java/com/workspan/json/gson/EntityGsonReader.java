@@ -28,7 +28,7 @@ public class EntityGsonReader {
 	public static void main(String[] args) throws IOException {
 		
 		validateArgument(args);
-		
+		logger.info("FileName is " + args[0]);
 		File file = new File(args[0]);
 		FileInputStream in = null;
 		if (file.isFile() && file.canRead()) {
@@ -71,7 +71,7 @@ public class EntityGsonReader {
 	 */
 	private static void validateArgument(String[] args) {
 		if(args.length<2) {
-			logger.error("Proper Usage is: java EntityJsonReader filename entityId");
+			logger.error("Proper Usage is: java -jar jarName filename entityId");
 			System.exit(0);
 		}
 	}
