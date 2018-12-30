@@ -1,11 +1,12 @@
 package com.workspan.json.model;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class EntityGraph {
 
-	private List<Entity> entities;
-	private List<Link> links;
+	private List<Entity> entities = new ArrayList<>();
+	private List<Link> links = new ArrayList<>();
 	public List<Entity> getEntities() {
 		return entities;
 	}

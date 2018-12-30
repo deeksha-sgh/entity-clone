@@ -125,7 +125,7 @@ public class EntityManager {
 	 * Method prepares Entity Map from Entity Graph.
 	 * It also creates link for the entities.
 	 */
-	public void generateEntityMap() {	
+	private void generateEntityMap() {	
 		fillEntityMap();
 		prepareLinks();	
 	}
@@ -176,6 +176,21 @@ public class EntityManager {
 
 	public void setMaxId(Integer maxId) {
 		this.maxId = maxId;
+	}
+
+
+	public Map<Integer, EntityNode> getEntityMap() {
+		return entityMap;
+	}
+
+
+	public Map<Integer, Boolean> getVisited() {
+		return visited;
+	}
+
+
+	public Map<Integer, Integer> getCloned() {
+		return cloned;
 	}
 	
 }
